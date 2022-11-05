@@ -2,13 +2,16 @@
 
 int main()
 {
-    InitWindow(800, 450, "raylib [core] example - basic window");
+    InitWindow(1500, 945, "Around Europe");
+
+    Texture2D map = LoadTexture("../resources/map.png");
 
     while (!WindowShouldClose())
     {
         BeginDrawing();
-        ClearBackground(RAYWHITE);
-        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+
+        DrawTextureEx(map, { 0, 0 }, 0, 1, WHITE);
+        
         EndDrawing();
     }
 
