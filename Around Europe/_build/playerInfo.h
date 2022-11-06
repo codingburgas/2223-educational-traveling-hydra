@@ -1,5 +1,5 @@
 #include <iostream>
 
-using namespce std;
+using namespace std;
 
 void showInfo();
