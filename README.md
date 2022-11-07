@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="https://github.com/codingburgas/2223-educational-traveling-hydra/blob/main/Around%20Europe/resources/logo.png" alt="Logo"/>
+</p>
+
+<h1 align="center"> Hydra </h1>
+
+<hr>
 
 ## Table of Contents
 - [Description](#description)
