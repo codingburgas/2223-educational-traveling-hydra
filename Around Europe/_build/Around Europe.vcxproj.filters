@@ -18,12 +18,24 @@
     <ClInclude Include="playerInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="cards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="playerInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

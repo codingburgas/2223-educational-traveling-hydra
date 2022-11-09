@@ -13,8 +13,9 @@ int main()
     {
         BeginDrawing();
 
-        DrawTextureEx(map, { 0, 0 }, 0, 1, WHITE);
+        displayMap(map);
         DrawTextureRec(cards, deck, {620, 760}, WHITE);
+
         
         EndDrawing();
     }

@@ -169,7 +169,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\game\src\screens.h" />
+    <ClInclude Include="cards.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="map.h" />
     <ClInclude Include="playerInfo.h" />
   </ItemGroup>
   <ItemGroup>
@@ -178,7 +180,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cards.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="map.cpp" />
     <ClCompile Include="playerInfo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
