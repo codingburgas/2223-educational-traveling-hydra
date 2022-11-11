@@ -1,7 +1,21 @@
 #include "cards.h"
 
-void CardRandomizer()
+void cardRandomizer(int randCard[])
 {
-	srand(time(0));
-	int cardRandomising = rand() % 5 + 1;
+    int temp = time(nullptr);
+    srand(temp);
+
+    int count = 5;
+
+    for (int i = 0; i < count; i++)
+    {
+        int j = rand() % count;
+
+        swap(randCard[i], randCard[j]);
+    }
+
+    for (int i = 0; i < count; i++)
+    {
+        cout << randCard[i] << " ";
+    }
 }
