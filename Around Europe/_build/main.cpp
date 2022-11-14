@@ -28,6 +28,8 @@ int main()
         DrawTextureRec(flag, playerFlag, flagPosition, WHITE);
         showCardsPlayerOne(cards, deck);
         showCardsPlayerTwo(cards, deck);
+        showPlayerOneInfo();
+        showPlayerTwoInfo();
 
         EndDrawing();
     }
