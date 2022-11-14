@@ -26,11 +26,14 @@ int main()
 
         DrawTextureRec(cards, deck, {620, 760}, WHITE);
         DrawTextureRec(flag, playerFlag, flagPosition, WHITE);
+        showCardsPlayerOne(cards, deck);
+        showCardsPlayerTwo(cards, deck);
 
         EndDrawing();
     }
     UnloadTexture(map);
     UnloadTexture(cards);
+    UnloadTexture(flag);
 
     CloseWindow();
 

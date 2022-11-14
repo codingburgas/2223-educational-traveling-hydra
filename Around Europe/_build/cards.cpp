@@ -19,3 +19,24 @@ void cardRandomizer(int randCard[])
         cout << randCard[i] << " ";
     }
 }
+
+void showCardsPlayerOne(Texture2D cards, Rectangle deck) {
+    
+    float coordinateY = 120;
+
+    for (int i = 0; i < 4; i++) {
+        DrawTextureRec(cards, deck, { 5, coordinateY }, WHITE);
+        coordinateY += 200;
+    }
+
+}
+void showCardsPlayerTwo(Texture2D cards, Rectangle deck) {
+    
+    float coordinateY = 120;
+
+    for (int i = 0; i < 4; i++) {
+        DrawTextureRec(cards, deck, { 1230, coordinateY }, WHITE);
+        coordinateY += 200;
+    }
+
+}
