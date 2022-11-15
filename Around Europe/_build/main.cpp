@@ -9,7 +9,7 @@ int main()
     Texture2D flag = LoadTexture("../resources/flags.png");
     
     Vector2 mousePosition = { -100, -100 };
-    Vector2 flagPosition;
+    Vector2 flagPosition = { -1000, -1000 };
 
     Rectangle countryCollisions = {0, 0, 0, 0};
     Rectangle deck = { 0, 0, (float)(cards.width / 6), (float)cards.height};
@@ -25,9 +25,11 @@ int main()
         displayMap(map);
 
         DrawTextureRec(cards, deck, {620, 760}, WHITE);
-        DrawTextureRec(flag, playerFlag, flagPosition, WHITE);
+        displayFlagOrCountryInfo(flag, playerFlag, flagPosition);
+        
         showCardsPlayerOne(cards, deck);
         showCardsPlayerTwo(cards, deck);
+        
         showPlayerOneInfo();
         showPlayerTwoInfo();
 
