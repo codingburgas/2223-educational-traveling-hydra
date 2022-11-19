@@ -26,7 +26,6 @@ int main()
         BeginDrawing();
 
         displayMenu(menu);
-        Menu();
         /* !!!DO NOT DELETE
         displayMap(map);
 
