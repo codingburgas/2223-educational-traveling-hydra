@@ -2,8 +2,6 @@
 
 int cardRandomizer(int randCard)
 {
-    //int temp = time(nullptr);
-    //srand(temp);
     int oldCardNumber = 0;
 
     srand(time(0));
@@ -17,20 +15,6 @@ int cardRandomizer(int randCard)
         oldCardNumber = randCard;
         return randCard;
     }
-
-    //int count = 5;
-    
-    //for (int i = 0; i < count; i++)
-   // {
-//randCard = rand() % count;
-       // return randCard;
-    //}
-
-    //for (int i = 0; i < count; i++)
-    //{
-     //   return randCard;
-   //}
-    
 }
 
 int cardFrameCounter(int cardsOrder, int cardFrame) {
