@@ -65,6 +65,11 @@ void displayButtons(Texture2D buttons)
     DrawTextureRec(buttons, buttonFrame, {620, 400}, WHITE);
     DrawTextureRec(buttons, buttonFrame, {620, 500}, WHITE);
 }
+void displayLogo(Texture2D logo)
+{
+    DrawText("Created by Team Hydra", 1100, 890, 25, DARKGRAY);
+    DrawTextureEx(logo, {1080, 700}, 0, 0.4, WHITE);
+}
 
 void displayMenuText()
 {
@@ -74,10 +79,11 @@ void displayMenuText()
     DrawText("Play", 725, 425, 40, DARKGRAY);
     DrawText("Quit", 725, 525, 40, DARKGRAY);
 }
-void displayMenu(Texture2D menu, Texture2D buttons)
+void displayMenu(Texture2D menu, Texture2D buttons, Texture2D logo)
 {
 	DrawTextureEx(menu, { 0, 0 }, 0, 1, WHITE);
     displayButtons(buttons);
+    displayLogo(logo);
 }
 
 void game()
@@ -89,6 +95,7 @@ void game()
     Texture2D flag = LoadTexture("../resources/flags.png");
     Texture2D menu = LoadTexture("../resources/menu.png");
     Texture2D buttons = LoadTexture("../resources/buttons.png");
+    Texture2D logo = LoadTexture("../resources/logo.png");
 
     Vector2 mousePosition = { -100, -100 };
     Vector2 flagPosition = { -100, -100 };
@@ -112,10 +119,9 @@ void game()
 
         if (buttonPlayClicked(buttonPosition, mousePosition) == 0 && isPlaying == 0)
         {
-            displayMenu(menu, buttons);
+            displayMenu(menu, buttons, logo);
             buttonStatus(buttons, buttonFrames, buttonPosition);
             displayMenuText();
-
         }
         else
         {
@@ -146,6 +152,7 @@ void game()
     UnloadTexture(cards);
     UnloadTexture(flag);
     UnloadTexture(buttons);
+    UnloadTexture(logo);
 
     CloseWindow();
 }
