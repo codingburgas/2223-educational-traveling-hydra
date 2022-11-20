@@ -27,7 +27,7 @@ Git
 - Installing
 1. Clone the repo
 ```
-git clone https://github.com/PPDimitrakova20/Selenium.git
+git clone https://github.com/codingburgas/2223-educational-traveling-hydra.git
 ```
 2. Open the .sln file
 3. Run the project!
