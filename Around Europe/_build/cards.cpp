@@ -1,15 +1,18 @@
 #include "cards.h"
 
+// Randomises player cards
 int cardRandomizer(int randCard)
 {
     int oldCardNumber = 0;
 
     srand(time(0));
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++)
+    {
         randCard = rand() % 6 + 1;
         
-        while(randCard == oldCardNumber) {
+        while(randCard == oldCardNumber) 
+        {
             randCard = rand() % 6 + 1;
         }
         oldCardNumber = randCard;
@@ -17,8 +20,11 @@ int cardRandomizer(int randCard)
     }
 }
 
-int cardFrameCounter(int cardsOrder, int cardFrame) {
-    switch (cardRandomizer(cardsOrder)) {
+// Returns whatever card/s the players have got 
+int cardFrameCounter(int cardsOrder, int cardFrame) 
+{
+    switch (cardRandomizer(cardsOrder)) 
+    {
     case 1:
         return cardFrame += 0;
         break;
@@ -37,15 +43,17 @@ int cardFrameCounter(int cardsOrder, int cardFrame) {
     }
 }
 
-void showCardsPlayerOne(Texture2D cards, Rectangle deck) {
-    
+// Visualises player one's cards
+void showCardsPlayerOne(Texture2D cards, Rectangle deck) 
+{   
     float cardWidth = (float)(cards.width / 6);
     int cardsOrder = 0;
     float coordinateY = 120;
     int cardFrame = 1;
     int maxCardsFrame = (int)(cards.width / (int)cardWidth);
     
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++)
+    {
         cardFrame = cardFrameCounter(cardsOrder, cardFrame);
         cardFrame %= maxCardsFrame;
         
@@ -55,15 +63,18 @@ void showCardsPlayerOne(Texture2D cards, Rectangle deck) {
 
 
 }
-void showCardsPlayerTwo(Texture2D cards, Rectangle deck) {
-    
+
+// Visualises player two's cards
+void showCardsPlayerTwo(Texture2D cards, Rectangle deck) 
+{
     float cardWidth = (float)(cards.width / 6);
     int cardsOrder = 0;
     float coordinateY = 120;
     int cardFrame = 1;
     int maxCardsFrame = (int)(cards.width / (int)cardWidth);
 
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++) 
+    {
         cardFrame = cardFrameCounter(cardsOrder, cardFrame);
         cardFrame %= maxCardsFrame;
 

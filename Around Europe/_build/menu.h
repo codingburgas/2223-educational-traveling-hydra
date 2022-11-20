@@ -7,4 +7,5 @@
 
 using namespace std;
 
-void game();
+// Calling main fuction
+void startGame();

@@ -2,5 +2,6 @@
 
 int main()
 {
-	game();
+	// Calling main game fuction
+	startGame();
 }
